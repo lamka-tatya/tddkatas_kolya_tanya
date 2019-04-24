@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using TddKatas;
 
 namespace Tests
 {
@@ -16,15 +17,17 @@ namespace Tests
             
             var result = LeapYear.Check(year);
             
-            Assert.IsTrue(result);;
+            Assert.IsTrue(result);
         }
-    }
 
-    public static class LeapYear
-    {
-        public static bool? Check(int year)
+        [Test]
+        public void Define_2001_AsCommon()
         {
-            throw new System.NotImplementedException();
+            var year = 2001;
+            
+            var result = LeapYear.Check(year);
+            
+            Assert.IsFalse(result);
         }
     }
 }
