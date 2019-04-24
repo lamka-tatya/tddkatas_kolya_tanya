@@ -49,5 +49,15 @@ namespace Tests
             
             Assert.IsTrue(result);
         }
+        
+        [Test]
+        public void Define_1900_AsCommon()
+        {
+            var year = 1990;
+            
+            var result = LeapYear.Check(year);
+            
+            Assert.IsTrue(result);
+        }
     }
 }
