@@ -29,5 +29,25 @@ namespace Tests
             
             Assert.IsFalse(result);
         }
+        
+        [Test]
+        public void Define_2002_AsCommon()
+        {
+            var year = 2002;
+            
+            var result = LeapYear.Check(year);
+            
+            Assert.IsFalse(result);
+        }
+        
+        [Test]
+        public void Define_2000_AsLeap()
+        {
+            var year = 2000;
+            
+            var result = LeapYear.Check(year);
+            
+            Assert.IsTrue(result);
+        }
     }
 }
