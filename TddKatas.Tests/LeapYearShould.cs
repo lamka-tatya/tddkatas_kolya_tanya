@@ -11,7 +11,7 @@ namespace Tests
         }
 
         [Test]
-        public void Define_1996_AsLeap()
+        public void Identify_1996_AsLeap()
         {
             var year = 1996;
             
@@ -21,7 +21,7 @@ namespace Tests
         }
 
         [Test]
-        public void Define_2001_AsCommon()
+        public void Identify_2001_AsCommon()
         {
             var year = 2001;
             
@@ -31,7 +31,7 @@ namespace Tests
         }
         
         [Test]
-        public void Define_2002_AsCommon()
+        public void Identify_2002_AsCommon()
         {
             var year = 2002;
             
@@ -41,7 +41,7 @@ namespace Tests
         }
         
         [Test]
-        public void Define_2000_AsLeap()
+        public void Identify_2000_AsLeap()
         {
             var year = 2000;
             
@@ -51,7 +51,7 @@ namespace Tests
         }
         
         [Test]
-        public void Define_1900_AsCommon()
+        public void Identify_1900_AsCommon()
         {
             var year = 1900;
             
