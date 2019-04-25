@@ -50,6 +50,17 @@ namespace Tests
             Assert.IsTrue(result);
         }
         
+        
+        [Test]
+        public void Identify_1600_AsLeap_BecauseDividedBy400()
+        {
+            var year = 1600;
+            
+            var result = LeapYear.Check(year);
+            
+            Assert.IsTrue(result);
+        }
+        
         [Test]
         public void Identify_1900_AsCommon_BecauseDividedBy100()
         {
