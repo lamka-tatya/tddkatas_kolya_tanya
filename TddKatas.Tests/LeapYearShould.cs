@@ -53,7 +53,7 @@ namespace Tests
         [Test]
         public void Define_1900_AsCommon()
         {
-            var year = 1990;
+            var year = 1900;
             
             var result = LeapYear.Check(year);
             
