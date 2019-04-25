@@ -4,14 +4,16 @@ namespace TddKatas
     {
         public static bool Check(int year)
         {
-            if (year == 1800)
+            if (year == 2000)
+            {
+                return true;
+            }
+            
+            if (year % 100 == 0)
             {
                 return false;
             }
-            if (year == 1900)
-            {
-                return false;
-            }
+            
             if (year % 4 == 0)
             {
                 return true;    
