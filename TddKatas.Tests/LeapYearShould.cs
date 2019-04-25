@@ -11,7 +11,7 @@ namespace Tests
         }
 
         [Test]
-        public void Identify_1996_AsLeap()
+        public void Identify_1996_AsLeap_BecauseDividedBy4()
         {
             var year = 1996;
             
@@ -41,7 +41,7 @@ namespace Tests
         }
         
         [Test]
-        public void Identify_2000_AsLeap()
+        public void Identify_2000_AsLeap_BecauseDividedBy400()
         {
             var year = 2000;
             
@@ -51,13 +51,13 @@ namespace Tests
         }
         
         [Test]
-        public void Identify_1900_AsCommon()
+        public void Identify_1900_AsCommon_BecauseDividedBy100()
         {
             var year = 1900;
             
             var result = LeapYear.Check(year);
             
-            Assert.IsTrue(result);
+            Assert.IsFalse(result);
         }
     }
 }

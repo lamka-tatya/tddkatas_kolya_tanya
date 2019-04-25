@@ -6,7 +6,7 @@ namespace TddKatas
         {
             if (year == 1900)
             {
-                return true;
+                return false;
             }
             if (year % 4 == 0)
             {
