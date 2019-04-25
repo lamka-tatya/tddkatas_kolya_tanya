@@ -59,5 +59,15 @@ namespace Tests
             
             Assert.IsFalse(result);
         }
+        
+        [Test]
+        public void Identify_1800_AsCommon_BecauseDividedBy100()
+        {
+            var year = 1800;
+            
+            var result = LeapYear.Check(year);
+            
+            Assert.IsFalse(result);
+        }
     }
 }

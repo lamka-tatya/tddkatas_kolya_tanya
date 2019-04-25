@@ -1,0 +1,10 @@
+*.xml
+*.iml
+*.pdb
+*.json
+*.tmp
+/TddKatas.Tests/obj/*
+/TddKatas/obj/*
+/TddKatas/bin/*
+/TddKatas.Tests/bin/*
+*.user
