@@ -110,6 +110,17 @@ namespace Tests
             
             CollectionAssert.AreEquivalent(result, new string[]{"CBD","CDB","BCD","BDC","DCB","DBC"});
         }
+        
+        
+        [Test]
+        public void WhenPassed_AAA_Then_ShouldGenerate_AAA()
+        {
+            var word = "AAA";
+            
+            var result = Anagrams.Generate(word);
+            
+            CollectionAssert.AreEquivalent(result, new string[]{"AAA"});
+        }
 
         [Test]
         public void WhenPassed_ABCD_Then_ShouldGenerate_Anagrams()

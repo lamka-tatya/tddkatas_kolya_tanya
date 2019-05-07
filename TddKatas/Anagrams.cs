@@ -7,6 +7,11 @@ namespace TddKatas
     {
         public static List<string> Generate(string word)
         {
+            if (word.Distinct().Count() == 1)
+            {
+                return new List<string> {word};
+            }
+            
             if (word == "biro")
             {
                 return new List<string>
@@ -32,11 +37,6 @@ namespace TddKatas
                 }
 
                 return result;
-            }
-
-            if (word.Distinct().Count() == 1)
-            {
-                return new List<string> {word};
             }
 
             if (word.Length == 2)
