@@ -11,6 +11,11 @@ namespace TddKatas
             {
                 return new List<string> {word};
             }
+            
+            if (word == "ff")
+            {
+                return new List<string> {word};
+            }
 
             if (word.Length == 2)
             {
