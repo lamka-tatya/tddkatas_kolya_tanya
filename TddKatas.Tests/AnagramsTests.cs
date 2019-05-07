@@ -18,7 +18,7 @@ namespace Tests
             
             var result = Anagrams.Generate(word);
             
-            CollectionAssert.AreEqual(result, new[] {word});
+            CollectionAssert.AreEquivalent(result, new[] {word});
         }
 
         [Test]
@@ -28,7 +28,7 @@ namespace Tests
             
             var result = Anagrams.Generate(word);
             
-            CollectionAssert.AreEqual(result, new []{"ab", "ba"});
+            CollectionAssert.AreEquivalent(result, new []{"ab", "ba"});
         }
         
         [Test]
@@ -38,7 +38,7 @@ namespace Tests
             
             var result = Anagrams.Generate(word);
             
-            CollectionAssert.AreEqual(result, new []{"cd", "dc"});
+            CollectionAssert.AreEquivalent(result, new []{"cd", "dc"});
         }
         
         [Test]
@@ -48,7 +48,7 @@ namespace Tests
             
             var result = Anagrams.Generate(word);
             
-            CollectionAssert.AreEqual(result, new []{"er", "re"});
+            CollectionAssert.AreEquivalent(result, new []{"er", "re"});
         }
         
         [Test]
@@ -58,7 +58,7 @@ namespace Tests
             
             var result = Anagrams.Generate(word);
             
-            CollectionAssert.AreEqual(result, new []{"ee"});
+            CollectionAssert.AreEquivalent(result, new []{"ee"});
         }
         
         [Test]
@@ -68,7 +68,7 @@ namespace Tests
             
             var result = Anagrams.Generate(word);
             
-            CollectionAssert.AreEqual(result, new []{"ff"});
+            CollectionAssert.AreEquivalent(result, new []{"ff"});
         }
         
         [Test]
@@ -78,7 +78,7 @@ namespace Tests
             
             var result = Anagrams.Generate(word);
             
-            CollectionAssert.AreEqual(result, new string[0]);
+            CollectionAssert.AreEquivalent(result, new string[0]);
         }
         
         [Test]
@@ -88,7 +88,7 @@ namespace Tests
             
             var result = Anagrams.Generate(word);
             
-            CollectionAssert.AreEqual(result, new string[]{"ABC","ACB","BAC","BCA","CAB","CBA"});
+            CollectionAssert.AreEquivalent(result, new string[]{"ABC","ACB","BAC","BCA","CAB","CBA"});
         }
         
         [Test]
@@ -98,7 +98,7 @@ namespace Tests
             
             var result = Anagrams.Generate(word);
             
-            CollectionAssert.AreEqual(result, new string[]{"ABD","ADB","BAD","BDA","DAB","DBA"});
+            CollectionAssert.AreEquivalent(result, new string[]{"ABD","ADB","BAD","BDA","DAB","DBA"});
         }
         
         [Test]
@@ -108,7 +108,7 @@ namespace Tests
             
             var result = Anagrams.Generate(word);
             
-            CollectionAssert.AreEqual(result, new string[]{"CBD","CDB","BCD","BDC","DCB","DBC"});
+            CollectionAssert.AreEquivalent(result, new string[]{"CBD","CDB","BCD","BDC","DCB","DBC"});
         }
 
         [Test]
@@ -118,7 +118,7 @@ namespace Tests
 
             var result = Anagrams.Generate(word);
 
-            CollectionAssert.AreEqual(result, new string[]
+            CollectionAssert.AreEquivalent(result, new string[]
             {
                 "biro", "bior", "brio", "broi", "boir", "bori",
                 "ibro", "ibor", "irbo", "irob", "iobr", "iorb",

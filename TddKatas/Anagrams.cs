@@ -17,23 +17,22 @@ namespace TddKatas
                     "obir", "obri", "oibr", "oirb", "orbi", "orib"
                 };
             }
-            
-            if (word == "CBD")
-            {
-                return new List<string> {"CBD","CDB","BCD","BDC","DCB","DBC"};
-            }
 
-            
-            if (word == "ABC")
+            if (word.Length == 3)
             {
-                return new List<string> {"ABC", "ACB", "BAC", "BCA", "CAB", "CBA"};
-            }
+                var firstLetter = word[0].ToString();
+                word = word.Substring(1);
+                var result = new List<string>();
 
-            if (word == "ABD")
-            {
-                return new List<string> {"ABD", "ADB", "BAD", "BDA", "DAB", "DBA"};
-            }
+                foreach (var anagram in GetAnagramsFromTwoLetters(word))
+                {
+                    result.Add(anagram.Insert(0, firstLetter));
+                    result.Add(anagram.Insert(1, firstLetter));
+                    result.Add(anagram.Insert(2, firstLetter));
+                }
 
+                return result;
+            }
 
             if (word.Distinct().Count() == 1)
             {
@@ -42,10 +41,15 @@ namespace TddKatas
 
             if (word.Length == 2)
             {
-                return new List<string> {word, string.Join("", word.Reverse())};
+                return GetAnagramsFromTwoLetters(word);
             }
 
             return new List<string>();
+        }
+
+        private static List<string> GetAnagramsFromTwoLetters(string word)
+        {
+            return new List<string> {word, string.Join("", word.Reverse())};
         }
     }
 }
