@@ -9,7 +9,7 @@ namespace Tests
 {
     public class AnagramsTests
     {
-        static char[] _oneLetterWords = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
+        private static char[] _oneLetterWords = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
         
         [TestCaseSource(nameof(_oneLetterWords))]
         public void WhenPassed_OneLetter_Then_ShouldGenerate_CollectionWithSameLetter(char letter)
@@ -31,5 +31,14 @@ namespace Tests
             CollectionAssert.AreEqual(result, new []{"ab", "ba"});
         }
         
+        [Test]
+        public void WhenPassed_CD_Then_ShouldGenerate_CD_DC()
+        {
+            var word = "cd";
+            
+            var result = Anagrams.Generate(word);
+            
+            CollectionAssert.AreEqual(result, new []{"cd", "dc"});
+        }
     }
 }
