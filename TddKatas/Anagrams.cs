@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TddKatas
 {
@@ -6,21 +7,10 @@ namespace TddKatas
     {
         public static List<string> Generate(string word)
         {
-            if (word == "ab")
+            if (word.Length == 2)
             {
-                return new List<string>{"ab", "ba"};
+                return new List<string>{word, string.Join("", word.Reverse())};
             }
-
-            if (word == "cd")
-            {
-                return new List<string>{"cd", "dc"};
-            }
-            
-            if (word == "er")
-            {
-                return new List<string>{"er", "re"};
-            }
-
             
             return new List<string> {word};
         }
