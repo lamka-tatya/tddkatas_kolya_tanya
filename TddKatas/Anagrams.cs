@@ -7,39 +7,40 @@ namespace TddKatas
     {
         public static List<string> Generate(string word)
         {
+            if (string.IsNullOrEmpty(word))
+            {
+                return new List<string>();
+            }
+
             if (word.Distinct().Count() == 1)
             {
                 return new List<string> {word};
             }
 
-            if (word.Length == 4)
-            {
-                var firstLetter = word[0].ToString();
-                word = word.Substring(1);
-                var result = new List<string>();
+            return GetAnagrams(word).Distinct().ToList();
+        }
 
-                foreach (var anagram in GetAnagramsForThreeLetters(word))
-                {
-                    result.Add(anagram.Insert(0, firstLetter));
-                    result.Add(anagram.Insert(1, firstLetter));
-                    result.Add(anagram.Insert(2, firstLetter));
-                    result.Add(anagram.Insert(3, firstLetter));
-                }
-
-                return result;
-            }
-
-            if (word.Length == 3)
-            {
-                return GetAnagramsForThreeLetters(word);
-            }
-
+        private static List<string> GetAnagrams(string word)
+        {
             if (word.Length == 2)
             {
-                return GetAnagramsFromTwoLetters(word);
+                return new List<string> {word, string.Join("", word.Reverse())};
             }
 
-            return new List<string>();
+            var firstLetter = word[0].ToString();
+            word = word.Substring(1);
+
+            var result = new List<string>();
+
+            foreach (var anagram in GetAnagrams(word))
+            {
+                for (int i = 0; i <= word.Length; i++)
+                {
+                    result.Add(anagram.Insert(i, firstLetter));
+                }
+            }
+
+            return result;
         }
 
         private static List<string> GetAnagramsForThreeLetters(string word)
