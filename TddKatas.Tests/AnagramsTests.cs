@@ -92,13 +92,29 @@ namespace Tests
         }
         
         [Test]
-        public void WhenPassed_ABDThen_ShouldGenerate_ABD_ADB_BAD_BDA_DAB_DBA()
+        public void WhenPassed_ABD_Then_ShouldGenerate_ABD_ADB_BAD_BDA_DAB_DBA()
         {
             var word = "ABD";
             
             var result = Anagrams.Generate(word);
             
             CollectionAssert.AreEqual(result, new string[]{"ABD","ADB","BAD","BDA","DAB","DBA"});
+        }
+
+        [Test]
+        public void WhenPassed_ABCD_Then_ShouldGenerate_Anagrams()
+        {
+            var word = "biro";
+
+            var result = Anagrams.Generate(word);
+
+            CollectionAssert.AreEqual(result, new string[]
+            {
+                "biro", "bior", "brio", "broi", "boir", "bori",
+                "ibro", "ibor", "irbo", "irob", "iobr", "iorb",
+                "rbio", "rboi", "ribo", "riob", "roib", "robi",
+                "obir", "obri", "oibr", "oirb", "orbi", "orib"
+            });
         }
     }
 }
