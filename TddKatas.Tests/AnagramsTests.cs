@@ -40,5 +40,15 @@ namespace Tests
             
             CollectionAssert.AreEqual(result, new []{"cd", "dc"});
         }
+        
+        [Test]
+        public void WhenPassed_ER_Then_ShouldGenerate_ER_RE()
+        {
+            var word = "er";
+            
+            var result = Anagrams.Generate(word);
+            
+            CollectionAssert.AreEqual(result, new []{"er", "re"});
+        }
     }
 }

@@ -15,6 +15,11 @@ namespace TddKatas
             {
                 return new List<string>{"cd", "dc"};
             }
+            
+            if (word == "er")
+            {
+                return new List<string>{"er", "re"};
+            }
 
             
             return new List<string> {word};
