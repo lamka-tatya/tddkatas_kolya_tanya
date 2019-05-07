@@ -12,11 +12,11 @@ namespace TddKatas
                 return new List<string>();
             }
 
-            if (word.Distinct().Count() == 1)
+            if (word.Length == 1)
             {
                 return new List<string> {word};
             }
-
+            
             return GetAnagrams(word).Distinct().ToList();
         }
 
@@ -41,27 +41,6 @@ namespace TddKatas
             }
 
             return result;
-        }
-
-        private static List<string> GetAnagramsForThreeLetters(string word)
-        {
-            var firstLetter = word[0].ToString();
-            word = word.Substring(1);
-            var result = new List<string>();
-
-            foreach (var anagram in GetAnagramsFromTwoLetters(word))
-            {
-                result.Add(anagram.Insert(0, firstLetter));
-                result.Add(anagram.Insert(1, firstLetter));
-                result.Add(anagram.Insert(2, firstLetter));
-            }
-
-            return result;
-        }
-
-        private static List<string> GetAnagramsFromTwoLetters(string word)
-        {
-            return new List<string> {word, string.Join("", word.Reverse())};
         }
     }
 }
