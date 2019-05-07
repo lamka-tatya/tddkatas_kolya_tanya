@@ -100,6 +100,16 @@ namespace Tests
             
             CollectionAssert.AreEqual(result, new string[]{"ABD","ADB","BAD","BDA","DAB","DBA"});
         }
+        
+        [Test]
+        public void WhenPassed_CBD_Then_ShouldGenerate_CBD_CDB_BCD_BDC_DCB_DBC()
+        {
+            var word = "CBD";
+            
+            var result = Anagrams.Generate(word);
+            
+            CollectionAssert.AreEqual(result, new string[]{"CBD","CDB","BCD","BDC","DCB","DBC"});
+        }
 
         [Test]
         public void WhenPassed_ABCD_Then_ShouldGenerate_Anagrams()

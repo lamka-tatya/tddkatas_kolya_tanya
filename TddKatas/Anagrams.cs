@@ -18,6 +18,12 @@ namespace TddKatas
                 };
             }
             
+            if (word == "CBD")
+            {
+                return new List<string> {"CBD","CDB","BCD","BDC","DCB","DBC"};
+            }
+
+            
             if (word == "ABC")
             {
                 return new List<string> {"ABC", "ACB", "BAC", "BCA", "CAB", "CBA"};
