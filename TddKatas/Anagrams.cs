@@ -7,12 +7,7 @@ namespace TddKatas
     {
         public static List<string> Generate(string word)
         {
-            if (word == "ee")
-            {
-                return new List<string> {word};
-            }
-            
-            if (word == "ff")
+            if (word.Distinct().Count() == 1)
             {
                 return new List<string> {word};
             }
@@ -22,7 +17,7 @@ namespace TddKatas
                 return new List<string>{word, string.Join("", word.Reverse())};
             }
             
-            return new List<string> {word};
+            return new List<string>();
         }
     }
 }
