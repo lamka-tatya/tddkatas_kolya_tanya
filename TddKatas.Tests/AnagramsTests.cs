@@ -90,5 +90,15 @@ namespace Tests
             
             CollectionAssert.AreEqual(result, new string[]{"ABC","ACB","BAC","BCA","CAB","CBA"});
         }
+        
+        [Test]
+        public void WhenPassed_ABDThen_ShouldGenerate_ABD_ADB_BAD_BDA_DAB_DBA()
+        {
+            var word = "ABD";
+            
+            var result = Anagrams.Generate(word);
+            
+            CollectionAssert.AreEqual(result, new string[]{"ABD","ADB","BAD","BDA","DAB","DBA"});
+        }
     }
 }
