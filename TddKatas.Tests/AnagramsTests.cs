@@ -70,5 +70,15 @@ namespace Tests
             
             CollectionAssert.AreEqual(result, new []{"ff"});
         }
+        
+        [Test]
+        public void WhenPassed_EmptyString_Then_ShouldGenerate_EmptyCollection()
+        {
+            var word = "";
+            
+            var result = Anagrams.Generate(word);
+            
+            CollectionAssert.AreEqual(result, new string[0]);
+        }
     }
 }
