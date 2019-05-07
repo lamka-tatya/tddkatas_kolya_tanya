@@ -80,5 +80,15 @@ namespace Tests
             
             CollectionAssert.AreEqual(result, new string[0]);
         }
+        
+        [Test]
+        public void WhenPassed_ABC_Then_ShouldGenerate_ABC_ACB_BAC_BCA_CAB_CBA()
+        {
+            var word = "ABC";
+            
+            var result = Anagrams.Generate(word);
+            
+            CollectionAssert.AreEqual(result, new string[]{"ABC","ACB","BAC","BCA","CAB","CBA"});
+        }
     }
 }
