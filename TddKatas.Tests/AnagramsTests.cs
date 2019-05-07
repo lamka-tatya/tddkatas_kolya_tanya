@@ -9,6 +9,8 @@ namespace Tests
 {
     public class AnagramsTests
     {
+        static char[] _oneLetterWords = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
+        
         [TestCaseSource(nameof(_oneLetterWords))]
         public void WhenPassed_OneLetter_Then_ShouldGenerate_CollectionWithSameLetter(char letter)
         {
@@ -19,6 +21,15 @@ namespace Tests
             CollectionAssert.AreEqual(result, new[] {word});
         }
 
-        static char[] _oneLetterWords = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
+        [Test]
+        public void WhenPassed_AB_Then_ShouldGenerate_AB_BA()
+        {
+            var word = "ab";
+            
+            var result = Anagrams.Generate(word);
+            
+            CollectionAssert.AreEqual(result, new []{"ab", "ba"});
+        }
+        
     }
 }
