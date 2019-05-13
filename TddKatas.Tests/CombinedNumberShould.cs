@@ -15,5 +15,15 @@ namespace Tests
 
             Assert.AreEqual("1", result);
         }
+        
+        [Test]
+        public void GenerateSameString_WhenPassed_10()
+        {
+            var numList = new List<int> {10};
+
+            var result = CombinedNumber.GenerateLargest(numList);
+
+            Assert.AreEqual("10", result);
+        }
     }
 }
