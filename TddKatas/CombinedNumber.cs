@@ -6,9 +6,9 @@ namespace TddKatas
     {
         public static string GenerateLargest(List<int> numList)
         {
-            if (numList.Count == 1 && numList[0] == 10)
+            if (numList.Count == 1)
             {
-                return "10";
+                return numList[0].ToString();
             }
             
             return "1";
