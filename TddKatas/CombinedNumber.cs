@@ -6,14 +6,15 @@ namespace TddKatas
     {
         public static string GenerateLargest(List<int> numList)
         {
-            if (numList.Count == 2 && numList[0] == 2 && numList[1] == 0)
+            if (numList.Count == 2)
             {
-                return "20";
-            }
-            
-            if (numList.Count == 2 && numList[0] == 0 && numList[1] == 2)
-            {
-                return "20";
+                var firstNum = numList[0];
+                var secondNum = numList[1];
+
+                var firstCase = int.Parse(firstNum.ToString() + secondNum.ToString());
+                var secondCase = int.Parse(secondNum.ToString() + firstNum.ToString());
+
+                return (firstCase > secondCase ? firstCase : secondCase).ToString();
             }
 
             if (numList.Count == 1)
