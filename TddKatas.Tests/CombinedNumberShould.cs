@@ -15,7 +15,7 @@ namespace Tests
 
             Assert.AreEqual("1", result);
         }
-        
+
         [Test]
         public void GenerateSameString_WhenPassed_10()
         {
@@ -24,6 +24,16 @@ namespace Tests
             var result = CombinedNumber.GenerateLargest(numList);
 
             Assert.AreEqual("10", result);
+        }
+
+        [Test]
+        public void GenerateString20_WhenPassed_0_and_2()
+        {
+            List<int> numList = new List<int> {0, 2};
+
+            var result = CombinedNumber.GenerateLargest(numList);
+
+            Assert.AreEqual("20", result);
         }
     }
 }
