@@ -56,5 +56,15 @@ namespace Tests
 
             Assert.AreEqual("321", result);
         }
+        
+        [Test]
+        public void GenerateString765_WhenPassed_5_and_7_and_6()
+        {
+            List<int> numList = new List<int> {5, 6, 7};
+
+            var result = CombinedNumber.GenerateLargest(numList);
+
+            Assert.AreEqual("765", result);
+        }
     }
 }
