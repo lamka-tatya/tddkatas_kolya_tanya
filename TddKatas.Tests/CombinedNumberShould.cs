@@ -36,6 +36,7 @@ namespace Tests
             Assert.AreEqual("20", result);
         }
 
+
         [Test]
         public void GenerateString20_WhenPassed_2_and_0()
         {
@@ -47,9 +48,9 @@ namespace Tests
         }
 
         [Test]
-        public void GenerateString321_WhenPassed_2_and_0_and_1()
+        public void GenerateString321_WhenPassed_2_and_3_and_1()
         {
-            List<int> numList = new List<int> {2, 0, 1};
+            List<int> numList = new List<int> {2, 3, 1};
 
             var result = CombinedNumber.GenerateLargest(numList);
 
