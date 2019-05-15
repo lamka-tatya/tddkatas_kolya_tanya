@@ -12,6 +12,12 @@ namespace TddKatas
                 var temp = GetInner(number / 2);
                 return temp.Concat(new[] {2}).ToArray();
             }
+            
+            if (number > 3 && number % 3 == 0)
+            {
+                var temp = GetInner(number / 3);
+                return temp.Concat(new[] {3}).ToArray();
+            }
 
             return GetInner(number);
         }

@@ -104,6 +104,16 @@ namespace Tests
 
             CollectionAssert.AreEquivalent(new[] {2, 2, 3}, result);
         }
+        
+        [Test]
+        public void Return_3_3_3_For_27()
+        {
+            var number = 27;
+
+            var result = PrimeFactors.Get(number);
+
+            CollectionAssert.AreEquivalent(new[] {3, 3, 3}, result);
+        }
     }
 
 } 
