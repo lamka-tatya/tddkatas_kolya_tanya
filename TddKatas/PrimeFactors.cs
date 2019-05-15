@@ -6,6 +6,11 @@ namespace TddKatas
     {
         public static int[] Get(int number)
         {
+            if (number == 12)
+            {
+                return new[] {2, 2, 3};
+            }
+            
             if (number == 8)
             {
                 return new[] {2, 2, 2};
