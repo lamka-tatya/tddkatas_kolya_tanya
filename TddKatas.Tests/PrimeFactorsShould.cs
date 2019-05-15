@@ -34,6 +34,16 @@ namespace Tests
 
             Assert.AreEqual(new[] {5}, result);
         }
+        
+        [Test]
+        public void Return_2_2_For_4()
+        {
+            var number = 4;
+
+            var result = PrimeFactors.Get(number);
+
+            CollectionAssert.AreEqual(new[] {2, 2}, result);
+        }
     }
 
 } 
