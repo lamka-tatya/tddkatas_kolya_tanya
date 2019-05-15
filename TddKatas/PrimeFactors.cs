@@ -6,19 +6,16 @@ namespace TddKatas
     {
         public static int[] Get(int number)
         {
-            var cases = new Dictionary<int, int[]>
-            {
-                {4, new[] {2, 2}},
-                {6, new[] {2, 3}},
-                {9, new[] {3, 3}},
-                {10, new[] {2, 5}}
-            };
+            var primes = new[] {3, 2};
 
-            if (cases.ContainsKey(number))
+            foreach (var prime in primes)
             {
-                return cases[number];
+                if (number > prime && number % prime == 0)
+                {
+                    return new[] {prime, number / prime};
+                }
             }
-            
+
             return new[] {number};
         }
     }
