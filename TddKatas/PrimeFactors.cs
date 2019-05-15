@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TddKatas
 {
@@ -6,16 +7,17 @@ namespace TddKatas
     {
         public static int[] Get(int number)
         {
-            if (number == 12)
+            if (number > 2 && number % 2 == 0)
             {
-                return new[] {2, 2, 3};
+                var temp = GetInner(number / 2);
+                return temp.Concat(new[] {2}).ToArray();
             }
-            
-            if (number == 8)
-            {
-                return new[] {2, 2, 2};
-            }
-            
+
+            return GetInner(number);
+        }
+
+        private static int[] GetInner(int number)
+        {
             var primes = new[] {2, 3, 5};
 
             foreach (var prime in primes)
