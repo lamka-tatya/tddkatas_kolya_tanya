@@ -124,6 +124,16 @@ namespace Tests
 
             CollectionAssert.AreEquivalent(new[] {7, 7}, result);
         }
+        
+        [Test]
+        public void Return_11_11_For_121()
+        {
+            var number = 121;
+
+            var result = PrimeFactors.Get(number);
+
+            CollectionAssert.AreEquivalent(new[] {11, 11}, result);
+        }
     }
 
 } 
