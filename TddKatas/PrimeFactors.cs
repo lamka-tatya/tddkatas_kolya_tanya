@@ -13,7 +13,7 @@ namespace TddKatas
 
         private static int[] GetInner(int number)
         {
-            var primes = new[] {2, 3, 5};
+            var primes = new[] {2, 3, 5, 7};
 
             foreach (var prime in primes)
             {
