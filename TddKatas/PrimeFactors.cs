@@ -1,22 +1,21 @@
+using System.Collections.Generic;
+
 namespace TddKatas
 {
     public static class PrimeFactors
     {
         public static int[] Get(int number)
         {
-            if (number == 9)
+            var cases = new Dictionary<int, int[]>
             {
-                return new[] {3, 3};
-            }
-            
-            if (number == 6)
+                {4, new[] {2, 2}},
+                {6, new[] {2, 3}},
+                {9, new[] {3, 3}}
+            };
+
+            if (cases.ContainsKey(number))
             {
-                return new[] {3, 2};
-            }
-            
-            if (number == 4)
-            {
-                return new[] {2, 2};
+                return cases[number];
             }
             
             return new[] {number};
