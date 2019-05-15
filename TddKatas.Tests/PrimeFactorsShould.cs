@@ -6,7 +6,7 @@ namespace Tests
     public class PrimeFactorsShould
     {
         [Test]
-        public void qwe()
+        public void Return_2_For_2()
         {
             var number = 2;
 
