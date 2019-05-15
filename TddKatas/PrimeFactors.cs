@@ -10,7 +10,8 @@ namespace TddKatas
             {
                 {4, new[] {2, 2}},
                 {6, new[] {2, 3}},
-                {9, new[] {3, 3}}
+                {9, new[] {3, 3}},
+                {10, new[] {2, 5}}
             };
 
             if (cases.ContainsKey(number))
