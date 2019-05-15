@@ -24,6 +24,16 @@ namespace Tests
 
             Assert.AreEqual(new[] {3}, result);
         }
+        
+        [Test]
+        public void Return_5_For_5()
+        {
+            var number = 5;
+
+            var result = PrimeFactors.Get(number);
+
+            Assert.AreEqual(new[] {5}, result);
+        }
     }
 
 } 

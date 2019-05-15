@@ -9,6 +9,11 @@ namespace TddKatas
                 return new[] {3};
             }
             
+            if (number == 5)
+            {
+                return new[] {5};
+            }
+            
             return new[] {2};
         }
     }
