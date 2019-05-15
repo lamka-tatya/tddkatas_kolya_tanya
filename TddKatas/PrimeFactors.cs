@@ -6,7 +6,7 @@ namespace TddKatas
     {
         public static int[] Get(int number)
         {
-            var primes = new[] {3, 2};
+            var primes = new[] {2, 3, 5};
 
             foreach (var prime in primes)
             {
