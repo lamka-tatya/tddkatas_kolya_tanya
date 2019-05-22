@@ -2,7 +2,7 @@ namespace TddKatas.TicToc
 {
     public class Game
     {
-        private readonly Space _space;
+        private Space _space;
         
         public Game()
         {
@@ -11,6 +11,12 @@ namespace TddKatas.TicToc
         public Space GetSpace()
         {
             return _space;
+        }
+
+        public void PlayRound(X x, Y y)
+        {
+            var coordinate = new Coordinate(x,y);
+            _space = new Space(new[] {coordinate });
         }
     }
 }
